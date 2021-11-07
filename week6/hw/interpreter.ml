@@ -1,0 +1,13 @@
+module F = Format
+
+(* practice *)
+let rec interp (e : Ast.ae) : int =
+       match e with
+       Ast.Num x -> x
+       | Ast.Add (y,z) -> ((interp y) + (interp z))
+       | Ast.Sub (q,w) -> ((interp q) - (interp w))
+       | Ast.Neg n ->(-1 *(interp n))
+
+let rec interp (s: Store.t)(e: Ast.vae) : int =
+        match e with
+        ()
